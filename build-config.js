@@ -56,7 +56,6 @@ var CKBUILDER_CONFIG = {
 		'clipboard' : 1,
 		'contextmenu' : 1,
 		'divarea' : 1,
-		'elementspath' : 1,
 		'enterkey' : 1,
 		'entities' : 1,
 		'filebrowser' : 1,
