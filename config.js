@@ -40,7 +40,7 @@ CKEDITOR.editorConfig = function( config ) {
 		
 	var lite = config.lite = config.lite || {};
 	
-	lite.isTracking = true;
+	lite.isTracking = false;
 	lite.userStyles = {
 			"21": 3,
 			"15": 1,
