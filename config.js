@@ -35,17 +35,25 @@ CKEDITOR.editorConfig = function( config ) {
 	// Set the most common block elements.
 	config.format_tags = 'p;h1;h2;h3;pre';
 	config.title = false;
-	config.extraAllowedContent = 'p[!data-id];';
+
+	// '*(*);*{*}' allows any class and any inline style.
+	config.extraAllowedContent = 'p[!data-id]; *(*); *{*}; *[!par-style];';
+
+	// Disable auto remove empty span
+	CKEDITOR.dtd.$removeEmpty.span = 0;
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
-		
+
 	var lite = config.lite = config.lite || {};
-	
+
 	lite.isTracking = false;
 	lite.userStyles = {
 			"21": 3,
 			"15": 1,
 			"18": 2
-		};	
+		};
+	lite.tooltips = {
+		show: false
+	}
 };
