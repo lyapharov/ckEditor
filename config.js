@@ -31,13 +31,14 @@ CKEDITOR.editorConfig = function( config ) {
 	// not needed in the Standard(s) toolbar.
 	config.removeButtons = 'Subscript,Superscript,Cut,Copy,Paste,PasteText,PasteFromWord,Redo,Undo,Scayt,Link,Unlink,Anchor,Table,Source,HorizontalRule,SpecialChar';
 	config.removePlugins = 'elementspath';
+	config.extraPlugins = 'tableresize';
 
 	// Set the most common block elements.
 	config.format_tags = 'p;h1;h2;h3;pre';
 	config.title = false;
 
 	// '*(*);*{*}' allows any class and any inline style.
-	config.extraAllowedContent = 'p[!data-id]; *(*); *{*}; *[!par-style]; table; tr; td; tbody;';
+	config.extraAllowedContent = '*[data-id, par-style]; *(*); *{*}; table[cellspacing, cellpadding]; tr; td; tbody;';
 
 	// Disable auto remove empty span
 	CKEDITOR.dtd.$removeEmpty.span = 0;
