@@ -38,7 +38,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.title = false;
 
 	// '*(*);*{*}' allows any class and any inline style.
-	config.extraAllowedContent = '*[data-id, par-style]; *(*); *{*}; table[cellspacing, cellpadding]; tr; td; tbody;';
+	config.extraAllowedContent = '*[data-id, par-style]; *(*); *{*}; table[cellspacing, cellpadding]; tr; td; tbody; div;';
 
 	// Disable auto remove empty span
 	CKEDITOR.dtd.$removeEmpty.span = 0;
