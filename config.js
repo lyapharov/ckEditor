@@ -33,11 +33,11 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removePlugins = 'elementspath';
 
 	// Set the most common block elements.
-	config.format_tags = 'p;h1;h2;h3;pre';
+	config.format_tags = 'p;h1;h2;h3;h4;h5;h6;pre;div';
 	config.title = false;
 
 	// '*(*);*{*}' allows any class and any inline style.
-	config.extraAllowedContent = '*[data-id, par-style]; *(*); *{*}; table[cellspacing, cellpadding]; tr; td; tbody; div;';
+	config.extraAllowedContent = '*[data-id, par-style]; *(*); *{*}; table[cellspacing, cellpadding]; tr; td; tbody; div;h1;h2;h3;h4;h5;h6;';
 
 	// Disable auto remove empty span
 	CKEDITOR.dtd.$removeEmpty.span = 0;
