@@ -1,10 +1,9 @@
 CKEDITOR.plugins.add('commentSelection', {
-    icons: 'Editor_icons',
+    icons: 'comment-part-hover',
     init: function(editor) {
-        var html, button;
-
-        editor.addCommand( 'commentSelection', {
+        editor.addCommand('commentSelection', {
             exec: function(editor) {
+                var html = editor.getSelectedHtml().getHtml();
                 html && editor.fire('comment', html);
             }
         });
@@ -14,12 +13,12 @@ CKEDITOR.plugins.add('commentSelection', {
             toolbar: 'comment'
         });
 
-        !editor.readOnly && editor.on('selectionChange', function() {
-            var command = editor.getCommand('commentSelection');
-
-            html = editor.getSelectedHtml().getHtml();
-            // enable disable button if need
-            // command.setState(CKEDITOR.[html ? 'TRISTATE_ON' : 'TRISTATE_OFF']);
-        });
+        //!editor.readOnly && editor.on('selectionChange', function() {
+        //    var command = editor.getCommand('commentSelection');
+        //
+        //    var html = editor.getSelectedHtml().getHtml();
+        //    // enable disable button if need
+        //    // command.setState(CKEDITOR[html ? 'TRISTATE_ON' : 'TRISTATE_OFF']);
+        //});
     }
 });
