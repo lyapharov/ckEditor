@@ -36,6 +36,9 @@ CKEDITOR.editorConfig = function( config ) {
 	config.format_tags = 'p;h1;h2;h3;h4;h5;h6;pre;div';
 	config.title = false;
 
+	// Enable spell checker
+	config.scayt_autoStartup = true;
+
 	// '*(*);*{*}' allows any class and any inline style.
 	config.extraAllowedContent = '*[data-id, par-style, start, type, contenteditable]; *(*); *{*}; table[cellspacing, cellpadding]; tr; td; tbody; div;h1;h2;h3;h4;h5;h6;';
 	config.extraPlugins = 'commentSelection';
