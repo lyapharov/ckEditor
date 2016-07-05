@@ -30,7 +30,6 @@ CKEDITOR.editorConfig = function( config ) {
 	// Remove some buttons provided by the standard plugins, which are
 	// not needed in the Standard(s) toolbar.
 	config.removeButtons = 'Subscript,Superscript,Cut,Copy,Paste,PasteText,PasteFromWord,Redo,Undo,Scayt,Link,Unlink,Anchor,Table,Source,HorizontalRule,SpecialChar';
-	config.removePlugins = 'elementspath,scayt';
 
 	// Set the most common block elements.
 	config.format_tags = 'p;h1;h2;h3;h4;h5;h6;pre;div';
@@ -38,7 +37,7 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// '*(*);*{*}' allows any class and any inline style.
 	config.extraAllowedContent = '*[data-id, par-style, start, type, contenteditable]; *(*); *{*}; table[cellspacing, cellpadding]; tr; td; tbody; div;h1;h2;h3;h4;h5;h6;';
-	config.extraPlugins = 'commentSelection,panelbutton,colorbutton,indentblock';
+	config.extraPlugins = 'commentSelection';
 
 	// Disable auto remove empty span
 	CKEDITOR.dtd.$removeEmpty.span = 0;

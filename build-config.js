@@ -13,10 +13,10 @@
  * (1) http://ckeditor.com/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) http://ckeditor.com/builder/10eb5d566d706f271209552ee917fcd2
+ * (2) http://ckeditor.com/builder/e6bf887757bbb97840c35ca15a7f690e
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) http://ckeditor.com/builder/download/10eb5d566d706f271209552ee917fcd2
+ * (3) http://ckeditor.com/builder/download/e6bf887757bbb97840c35ca15a7f690e
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -25,7 +25,7 @@
  */
 
 var CKBUILDER_CONFIG = {
-	skin: 'flat',
+	skin: 'minimalist',
 	preset: 'standard',
 	ignore: [
 		'.bender',
@@ -52,31 +52,33 @@ var CKBUILDER_CONFIG = {
 	plugins : {
 		'base64image' : 1,
 		'basicstyles' : 1,
+		'blockquote' : 1,
 		'clipboard' : 1,
+		'colorbutton' : 1,
 		'confighelper' : 1,
 		'contextmenu' : 1,
 		'divarea' : 1,
-		'elementspath' : 1,
 		'enterkey' : 1,
 		'entities' : 1,
 		'filebrowser' : 1,
+		'find' : 1,
 		'floatingspace' : 1,
 		'font' : 1,
 		'format' : 1,
 		'horizontalrule' : 1,
 		'htmlwriter' : 1,
+		'indentblock' : 1,
 		'indentlist' : 1,
 		'justify' : 1,
 		'link' : 1,
 		'list' : 1,
 		'lite' : 1,
 		'maximize' : 1,
+		'panelbutton' : 1,
 		'pastebase64' : 1,
 		'pastefromword' : 1,
 		'pastetext' : 1,
 		'removeformat' : 1,
-		'scayt' : 1,
-		'sharedspace' : 1,
 		'showborders' : 1,
 		'sourcearea' : 1,
 		'specialchar' : 1,
@@ -85,8 +87,7 @@ var CKBUILDER_CONFIG = {
 		'table' : 1,
 		'tabletools' : 1,
 		'toolbar' : 1,
-		'undo' : 1,
-		'wsc' : 1
+		'undo' : 1
 	},
 	languages : {
 		'en' : 1,
