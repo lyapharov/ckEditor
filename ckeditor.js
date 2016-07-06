@@ -975,4 +975,106 @@ e();g=h.getDocumentPosition();h.setStyles({left:-1*g.x+"px",top:-1*g.y+"px"});CK
 p.y);h.removeClass("cke_maximized");CKEDITOR.env.webkit&&(h.setStyle("display","inline"),setTimeout(function(){h.setStyle("display","block")},0));a.fire("resize",{outerHeight:a.container.$.offsetHeight,contentsHeight:g.$.offsetHeight,outerWidth:a.container.$.offsetWidth})}this.toggleState();if(d=this.uiItems[0])g=this.state==CKEDITOR.TRISTATE_OFF?f.maximize.maximize:f.maximize.minimize,d=CKEDITOR.document.getById(d._.id),d.getChild(1).setHtml(g),d.setAttribute("title",g),d.setAttribute("href",'javascript:void("'+
 g+'");');"wysiwyg"==a.mode?l?(CKEDITOR.env.gecko&&v(a),a.getSelection().selectRanges(l),(k=a.getSelection().getStartElement())&&k.scrollIntoView(!0)):c.$.scrollTo(m.x,m.y):(l&&(k.selectionStart=l[0],k.selectionEnd=l[1]),k.scrollLeft=m[0],k.scrollTop=m[1]);l=m=null;n=this.state;a.fire("maximize",this.state)},canUndo:!1});a.ui.addButton&&a.ui.addButton("Maximize",{label:f.maximize.maximize,command:"maximize",toolbar:"tools,10"});a.on("mode",function(){var b=a.getCommand("maximize");b.setState(b.state==
 CKEDITOR.TRISTATE_DISABLED?CKEDITOR.TRISTATE_DISABLED:n)},null,null,100)}}})})();CKEDITOR.plugins.add("find",{requires:"dialog",init:function(a){var b=a.addCommand("find",new CKEDITOR.dialogCommand("find"));b.canUndo=!1;b.readOnly=1;a.addCommand("replace",new CKEDITOR.dialogCommand("replace")).canUndo=!1;a.ui.addButton&&(a.ui.addButton("Find",{label:a.lang.find.find,command:"find",toolbar:"find,10"}),a.ui.addButton("Replace",{label:a.lang.find.replace,command:"replace",toolbar:"find,20"}));CKEDITOR.dialog.add("find",this.path+"dialogs/find.js");CKEDITOR.dialog.add("replace",this.path+
-"dialogs/find.js")}});CKEDITOR.config.find_highlight={element:"span",styles:{"background-color":"#004",color:"#fff"}};CKEDITOR.config.plugins='basicstyles,blockquote,dialogui,dialog,clipboard,panel,floatpanel,menu,contextmenu,button,toolbar,enterkey,entities,popup,filebrowser,floatingspace,listblock,richcombo,format,horizontalrule,htmlwriter,indent,indentlist,fakeobjects,link,list,pastetext,pastefromword,removeformat,showborders,sourcearea,specialchar,stylescombo,tab,table,tabletools,undo,base64image,divarea,confighelper,font,justify,lite,pastebase64,panelbutton,colorbutton,indentblock,maximize,find';CKEDITOR.config.skin='minimalist';(function() {var setIcons = function(icons, strip) {var path = CKEDITOR.getUrl( 'plugins/' + strip );icons = icons.split( ',' );for ( var i = 0; i < icons.length; i++ )CKEDITOR.skin.icons[ icons[ i ] ] = { path: path, offset: -icons[ ++i ], bgsize : icons[ ++i ] };};if (CKEDITOR.env.hidpi) setIcons('bold,0,,italic,24,,strike,48,,subscript,72,,superscript,96,,underline,120,,blockquote,144,,copy-rtl,168,,copy,192,,cut-rtl,216,,cut,240,,paste-rtl,264,,paste,288,,horizontalrule,312,,indent-rtl,336,,indent,360,,outdent-rtl,384,,outdent,408,,anchor-rtl,432,,anchor,456,,link,480,,unlink,504,,bulletedlist-rtl,528,,bulletedlist,552,,numberedlist-rtl,576,,numberedlist,600,,pastetext-rtl,624,,pastetext,648,,pastefromword-rtl,672,,pastefromword,696,,removeformat,720,,source-rtl,744,,source,768,,specialchar,792,,table,816,,redo-rtl,840,,redo,864,,undo-rtl,888,,undo,912,,base64image,936,,justifyblock,960,,justifycenter,984,,justifyleft,1008,,justifyright,1032,,lite-acceptall,1056,,lite-acceptone,1080,,lite-rejectall,1104,,lite-rejectone,1128,,lite-toggleshow,1152,,lite-toggletracking,1176,,bgcolor,1200,,textcolor,1224,,maximize,1248,,find-rtl,1272,,find,1296,,replace,1320,','icons_hidpi.png');else setIcons('bold,0,auto,italic,24,auto,strike,48,auto,subscript,72,auto,superscript,96,auto,underline,120,auto,blockquote,144,auto,copy-rtl,168,auto,copy,192,auto,cut-rtl,216,auto,cut,240,auto,paste-rtl,264,auto,paste,288,auto,horizontalrule,312,auto,indent-rtl,336,auto,indent,360,auto,outdent-rtl,384,auto,outdent,408,auto,anchor-rtl,432,auto,anchor,456,auto,link,480,auto,unlink,504,auto,bulletedlist-rtl,528,auto,bulletedlist,552,auto,numberedlist-rtl,576,auto,numberedlist,600,auto,pastetext-rtl,624,auto,pastetext,648,auto,pastefromword-rtl,672,auto,pastefromword,696,auto,removeformat,720,auto,source-rtl,744,auto,source,768,auto,specialchar,792,auto,table,816,auto,redo-rtl,840,auto,redo,864,auto,undo-rtl,888,auto,undo,912,auto,base64image,936,auto,justifyblock,960,auto,justifycenter,984,auto,justifyleft,1008,auto,justifyright,1032,auto,lite-acceptall,1056,auto,lite-acceptone,1080,auto,lite-rejectall,1104,auto,lite-rejectone,1128,auto,lite-toggleshow,1152,auto,lite-toggletracking,1176,auto,bgcolor,1200,auto,textcolor,1224,auto,maximize,1248,auto,find-rtl,1272,auto,find,1296,auto,replace,1320,auto','icons.png');})();CKEDITOR.lang.languages={"en":1,"ru":1};}());
+"dialogs/find.js")}});CKEDITOR.config.find_highlight={element:"span",styles:{"background-color":"#004",color:"#fff"}};CKEDITOR.config.plugins='basicstyles,blockquote,sharedspace,dialogui,dialog,clipboard,panel,floatpanel,menu,contextmenu,button,toolbar,enterkey,entities,popup,filebrowser,floatingspace,listblock,richcombo,format,horizontalrule,htmlwriter,indent,indentlist,fakeobjects,link,list,pastetext,pastefromword,removeformat,showborders,sourcearea,specialchar,stylescombo,tab,table,tabletools,undo,base64image,divarea,confighelper,font,justify,lite,pastebase64,panelbutton,colorbutton,indentblock,maximize,find';CKEDITOR.config.skin='minimalist';(function() {var setIcons = function(icons, strip) {var path = CKEDITOR.getUrl( 'plugins/' + strip );icons = icons.split( ',' );for ( var i = 0; i < icons.length; i++ )CKEDITOR.skin.icons[ icons[ i ] ] = { path: path, offset: -icons[ ++i ], bgsize : icons[ ++i ] };};if (CKEDITOR.env.hidpi) setIcons('bold,0,,italic,24,,strike,48,,subscript,72,,superscript,96,,underline,120,,blockquote,144,,copy-rtl,168,,copy,192,,cut-rtl,216,,cut,240,,paste-rtl,264,,paste,288,,horizontalrule,312,,indent-rtl,336,,indent,360,,outdent-rtl,384,,outdent,408,,anchor-rtl,432,,anchor,456,,link,480,,unlink,504,,bulletedlist-rtl,528,,bulletedlist,552,,numberedlist-rtl,576,,numberedlist,600,,pastetext-rtl,624,,pastetext,648,,pastefromword-rtl,672,,pastefromword,696,,removeformat,720,,source-rtl,744,,source,768,,specialchar,792,,table,816,,redo-rtl,840,,redo,864,,undo-rtl,888,,undo,912,,base64image,936,,justifyblock,960,,justifycenter,984,,justifyleft,1008,,justifyright,1032,,lite-acceptall,1056,,lite-acceptone,1080,,lite-rejectall,1104,,lite-rejectone,1128,,lite-toggleshow,1152,,lite-toggletracking,1176,,bgcolor,1200,,textcolor,1224,,maximize,1248,,find-rtl,1272,,find,1296,,replace,1320,','icons_hidpi.png');else setIcons('bold,0,auto,italic,24,auto,strike,48,auto,subscript,72,auto,superscript,96,auto,underline,120,auto,blockquote,144,auto,copy-rtl,168,auto,copy,192,auto,cut-rtl,216,auto,cut,240,auto,paste-rtl,264,auto,paste,288,auto,horizontalrule,312,auto,indent-rtl,336,auto,indent,360,auto,outdent-rtl,384,auto,outdent,408,auto,anchor-rtl,432,auto,anchor,456,auto,link,480,auto,unlink,504,auto,bulletedlist-rtl,528,auto,bulletedlist,552,auto,numberedlist-rtl,576,auto,numberedlist,600,auto,pastetext-rtl,624,auto,pastetext,648,auto,pastefromword-rtl,672,auto,pastefromword,696,auto,removeformat,720,auto,source-rtl,744,auto,source,768,auto,specialchar,792,auto,table,816,auto,redo-rtl,840,auto,redo,864,auto,undo-rtl,888,auto,undo,912,auto,base64image,936,auto,justifyblock,960,auto,justifycenter,984,auto,justifyleft,1008,auto,justifyright,1032,auto,lite-acceptall,1056,auto,lite-acceptone,1080,auto,lite-rejectall,1104,auto,lite-rejectone,1128,auto,lite-toggleshow,1152,auto,lite-toggletracking,1176,auto,bgcolor,1200,auto,textcolor,1224,auto,maximize,1248,auto,find-rtl,1272,auto,find,1296,auto,replace,1320,auto','icons.png');})();CKEDITOR.lang.languages={"en":1,"ru":1};}());
+( function() {
+
+    'use strict';
+
+    var containerTpl = CKEDITOR.addTemplate( 'sharedcontainer', '<div' +
+        ' id="cke_{name}"' +
+        ' class="cke {id} cke_reset_all cke_chrome cke_editor_{name} cke_shared cke_detached cke_{langDir} ' + CKEDITOR.env.cssClass + '"' +
+        ' dir="{langDir}"' +
+        ' title="' + ( CKEDITOR.env.gecko ? ' ' : '' ) + '"' +
+        ' lang="{langCode}"' +
+        ' role="presentation"' +
+        '>' +
+        '<div class="cke_inner">' +
+        '<div id="{spaceId}" class="cke_{space}" role="presentation">{content}</div>' +
+        '</div>' +
+        '</div>' );
+
+    CKEDITOR.plugins.add( 'sharedspace', {
+        init: function( editor ) {
+            // Create toolbars on #loaded (like themed creator), but do that
+            // with higher priority to block the default scenario.
+            editor.on( 'loaded', function() {
+                var spaces = editor.config.sharedSpaces;
+
+                if ( spaces ) {
+                    for ( var spaceName in spaces )
+                        create( editor, spaceName, spaces[ spaceName ] );
+                }
+            }, null, null, 9 );
+        }
+    } );
+
+    function create( editor, spaceName, target ) {
+        var innerHtml, space;
+
+        if ( typeof target == 'string' ) {
+            target = CKEDITOR.document.getById( target );
+        } else {
+            target = new CKEDITOR.dom.element( target );
+        }
+
+        if ( target ) {
+            // Have other plugins filling the space.
+            innerHtml = editor.fire( 'uiSpace', { space: spaceName, html: '' } ).html;
+
+            if ( innerHtml ) {
+                // Block the uiSpace handling by others (e.g. themed-ui).
+                editor.on( 'uiSpace', function( ev ) {
+                    if ( ev.data.space == spaceName )
+                        ev.cancel();
+                }, null, null, 1 );  // Hi-priority
+
+                // Inject the space into the target.
+                space = target.append( CKEDITOR.dom.element.createFromHtml( containerTpl.output( {
+                    id: editor.id,
+                    name: editor.name,
+                    langDir: editor.lang.dir,
+                    langCode: editor.langCode,
+                    space: spaceName,
+                    spaceId: editor.ui.spaceId( spaceName ),
+                    content: innerHtml
+                } ) ) );
+
+                // Only the first container starts visible. Others get hidden.
+                if ( target.getCustomData( 'cke_hasshared' ) )
+                    space.hide();
+                else
+                    target.setCustomData( 'cke_hasshared', 1 );
+
+                // There's no need for the space to be selectable.
+                space.unselectable();
+
+                // Prevent clicking on non-buttons area of the space from blurring editor.
+                space.on( 'mousedown', function( evt ) {
+                    evt = evt.data;
+                    if ( !evt.getTarget().hasAscendant( 'a', 1 ) )
+                        evt.preventDefault();
+                } );
+
+                // Register this UI space to the focus manager.
+                editor.focusManager.add( space, 1 );
+
+                // When the editor gets focus, show the space container, hiding others.
+                editor.on( 'focus', function() {
+                    for ( var i = 0, sibling, children = target.getChildren(); ( sibling = children.getItem( i ) ); i++ ) {
+                        if ( sibling.type == CKEDITOR.NODE_ELEMENT &&
+                            !sibling.equals( space ) &&
+                            sibling.hasClass( 'cke_shared' ) ) {
+                            sibling.hide();
+                        }
+                    }
+
+                    space.show();
+                } );
+
+                editor.on( 'destroy', function() {
+                    space.remove();
+                } );
+            }
+        }
+    }
+} )();
