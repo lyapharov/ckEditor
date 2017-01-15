@@ -16,7 +16,14 @@ CKEDITOR.editorConfig = function( config ) {
 	config.coreStyles_italic = { element: 'span', styles: { 'font-style': 'italic' }, overrides: 'em' };
 	config.coreStyles_underline = { element: 'span', styles: { 'text-decoration': 'underline' }, overrides: 'u' };
 
-	config.font_names = 'Arial;Comic Sans MS;Courier New;Georgia;Lucida Sans Unicode;Tahoma;Times New Roman;Trebuchet MS;Verdana';
+	config.font_names = 'Arial;Comic Sans MS;' +
+		'Calibri;' +
+		'Courier New;Georgia;' +
+		'Lucida Sans Unicode;' +
+		'Tahoma;' +
+		'Times New Roman;' +
+		'Trebuchet MS;Verdana';
+
 	config.fontSize_style = {
 		element: 'span',
 		styles: { 'font-size': '#(size)' },
@@ -26,7 +33,24 @@ CKEDITOR.editorConfig = function( config ) {
 		} ]
 	};
 
-	config.fontSize_sizes="8/8pt;9/9pt;10/10pt;11/11pt;12/12pt;14/14pt;16/16pt;18/18pt;20/20pt;22/22pt;24/24pt;26/26pt;28/28pt;36/36pt;48/48pt;72/72pt";
+	config.fontSize_sizes="8/8pt;" +
+		"9/9pt;" +
+		"10/10pt;" +
+		"10.5/10.5pt;" +
+		"11/11pt;" +
+		"12/12pt;" +
+		"14/14pt;" +
+		"16/16pt;" +
+		"18/18pt;" +
+		"20/20pt;" +
+		"22/22pt;" +
+		"24/24pt;" +
+		"26/26pt;" +
+		"28/28pt;" +
+		"36/36pt;" +
+		"48/48pt;" +
+		"72/72pt";
+
 	config.font_style = {
 		element: 'span',
 		containers: ['p', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
