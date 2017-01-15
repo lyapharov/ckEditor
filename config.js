@@ -39,6 +39,7 @@ CKEDITOR.editorConfig = function( config ) {
 		"10.5/10.5pt;" +
 		"11/11pt;" +
 		"12/12pt;" +
+		"13/13pt;" +
 		"14/14pt;" +
 		"16/16pt;" +
 		"18/18pt;" +
